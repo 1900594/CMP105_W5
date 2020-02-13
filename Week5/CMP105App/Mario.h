@@ -7,7 +7,7 @@ class Mario : public GameObject, private Input
 public:
 	Mario();
 	~Mario();
-
+	void update(float dt)override;
 
 protected: 
 	Animation walk;

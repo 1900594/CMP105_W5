@@ -6,7 +6,7 @@
 #include <string>
 #include <iostream>
 #include "Zombie.h"
-
+#include "Mario.h"
 
 class Level{
 public:
@@ -26,6 +26,8 @@ private:
 	sf::RenderWindow* window;
 	Input* input;
 	GameObject* zombieAnimation;
+	GameObject* marioAnimation;
+	sf::Texture marioTexture;
 	sf::Texture zombieTexture;
 	
 };

@@ -19,6 +19,34 @@ Zombie::~Zombie()
 
 }
 
+void Zombie::handleInput(float dt)
+{
+	if (input->isKeyDown(sf::Keyboard::Right))
+	{
+		walk.setFlipped(false);
+		move(200 * dt, 0);
+	}
+
+	if (input->isKeyDown(sf::Keyboard::Left))
+	{
+		walk.setFlipped(true);
+		move(-200 * dt, 0);
+	}
+
+	if (input->isKeyDown(sf::Keyboard::Up))
+	{
+		move(0, -200 * dt);
+	}
+
+	if (input->isKeyDown(sf::Keyboard::Down))
+	{
+		move(0, 200 * dt);
+	}
+
+
+
+}
+
 void Zombie::update(float dt)
 {
 	walk.animate(dt);

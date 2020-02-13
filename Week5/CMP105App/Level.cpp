@@ -12,6 +12,7 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	zombieAnimation->setSize(sf::Vector2f(55, 108));
 	zombieAnimation->setPosition(100, 100);
 	zombieAnimation->setTexture(&zombieTexture);
+	zombieAnimation->setInput(input);
 }
 
 Level::~Level()
@@ -22,7 +23,7 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-
+	zombieAnimation->handleInput(dt);
 }
 
 // Update game objects

@@ -8,10 +8,12 @@ public:
 	Mario();
 	~Mario();
 	void update(float dt)override;
+	void handleInput(float dt)override;
 
 protected: 
 	Animation walk;
 	Animation swim;
 	Animation duck;
+	Animation* current = &walk;
 };
 

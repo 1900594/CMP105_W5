@@ -32,6 +32,7 @@ Level::~Level()
 void Level::handleInput(float dt)
 {
 	zombieAnimation->handleInput(dt);
+	marioAnimation->handleInput(dt);
 }
 
 // Update game objects
